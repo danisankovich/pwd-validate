@@ -123,7 +123,7 @@ const pwdValidate = (password, options) => {
       if (checkHasNoInvalidStrings(password, hasNoInvalidStrings).length > 0) {
         errors.hasNoInvalidStrings = `Password cannot contain the following strings: [${hasNoInvalidStrings.join(', ')}]`;
       }
-    }  
+    }
   }
 
   if (!isEmpty(errors)) {
