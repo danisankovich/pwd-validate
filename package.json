@@ -1,6 +1,6 @@
 {
   "name": "pwd-validate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Password validator",
   "main": "index.js",
   "scripts": {
