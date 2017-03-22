@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for secureit/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">secureit/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>74/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>59/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>62/62</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">78×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+const getSpecifications = (options) =&gt; {
+  const validOptions = [
+    'minLength', 'maxLength', 'hasNumber', 'hasLowerCase', 'hasUpperCase', 'hasSpecialCharacter', 'hasNoInvalidStrings',
+  ];
+&nbsp;
+  const validValues = {
+    minLength: 'number',
+    maxLength: 'number',
+    hasNumber: 'boolean',
+    hasLowerCase: 'boolean',
+    hasUpperCase: 'boolean',
+    hasSpecialCharacter: 'boolean',
+  }
+&nbsp;
+  const specifications = {};
+&nbsp;
+  validOptions.forEach((option) =&gt; {
+    if (options[option]) {
+      if (option === 'hasNoInvalidStrings') {
+        if (!Array.isArray(options[option])) {
+          throw new Error(`${option} must be an array`);
+        }
+      }
+      else {
+        if (typeof options[option] !== validValues[option]) {
+          throw new Error(`${option} must be a ${validValues[option]}`)
+        }
+      }
+      specifications[option] = options[option];
+    }
+  });
+&nbsp;
+  return specifications;
+}
+&nbsp;
+const isEmpty = (obj) =&gt; {
+  for(let key in obj) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(obj.hasOwnProperty(key)) return false;
+  }
+  return true;
+}
+&nbsp;
+const checkMinLength = (password, minLength) =&gt; {
+  if (password.length &lt; minLength) {
+    return `Password does not contain enough characters. Password contains ${password.length} characters, and requires at least ${minLength}`;
+  }
+}
+&nbsp;
+const checkMaxLength = (password, maxLength) =&gt; {
+  if (password.length &gt; maxLength) {
+    return `Password contains too many characters. Password contains ${password.length} characters, and allows up to ${maxLength} characters`;
+  }
+}
+&nbsp;
+const checkHasNumber = password =&gt; /[0-9]/.test(password);
+&nbsp;
+const checkHasLowerCase = password =&gt; /[a-z]/.test(password);
+&nbsp;
+const checkHasUpperCase = password =&gt; /[A-Z]/.test(password);
+&nbsp;
+const checkHasSpecialCharacter = password =&gt; /[-!$%^&amp;*()_+|~=`{}\[\]:";'&lt;&gt;?,.\/]/.test(password);
+&nbsp;
+const checkHasNoInvalidStrings = (password, badStrings) =&gt; {
+  const badStringsFound = [];
+  badStrings.forEach((c) =&gt; {
+    if (password.indexOf(c) &gt; -1) badStringsFound.push(c);
+  })
+  return badStringsFound;
+}
+&nbsp;
+const pwdValidate = (password, options) =&gt; {
+  const errors = {};
+&nbsp;
+  if (typeof password !== 'string') {
+    errors.passwordType = 'Password must be a string';
+  }
+  if (options) {
+    if (typeof options !== 'object' || Array.isArray(options)) {
+      errors.optionsType = 'Optional arguments must be passed as an object';
+    }
+&nbsp;
+    const {
+      minLength,
+      maxLength,
+      hasNumber,
+      hasLowerCase,
+      hasUpperCase,
+      hasSpecialCharacter,
+      hasNoInvalidStrings,
+    } = getSpecifications(options);
+&nbsp;
+    if (minLength) {
+      if (checkMinLength(password, minLength)) errors.minLength = checkMinLength(password, minLength);
+    }
+    if (maxLength) {
+      if (checkMaxLength(password, maxLength)) errors.maxLength = checkMaxLength(password, maxLength);
+    }
+    if (minLength &amp;&amp; maxLength) {
+      if (minLength &gt;= maxLength) {
+        errors.equalLength = 'minLength cannot be equal to or greater than maxLength';
+      }
+    }
+&nbsp;
+    if (hasNumber) {
+      if (!checkHasNumber(password)) errors.hasNumber = 'Password must contain at least one number';
+    }
+&nbsp;
+    if (hasLowerCase) {
+      if (!checkHasLowerCase(password)) errors.hasLowerCase = 'Password must contain at least one lower case letter';
+    }
+&nbsp;
+    if (hasUpperCase) {
+      if (!checkHasUpperCase(password)) errors.hasUpperCase = 'Password must contain at least one upper case letter';
+    }
+&nbsp;
+    if (hasSpecialCharacter) {
+      if (!checkHasSpecialCharacter(password)) errors.hasSpecialCharacter = 'Password must contain at least one special character';
+    }
+&nbsp;
+    if (hasNoInvalidStrings) {
+      if (checkHasNoInvalidStrings(password, hasNoInvalidStrings).length &gt; 0) {
+        errors.hasNoInvalidStrings = `Password cannot contain the following strings: [${hasNoInvalidStrings.join(', ')}]`;
+      }
+    }  
+  }
+&nbsp;
+  if (!isEmpty(errors)) {
+    return {errorMessages: errors, isValid: false};
+  } else {
+    return { password, isValid: true };
+  }
+&nbsp;
+}
+&nbsp;
+module.exports = pwdValidate;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 22 2017 00:23:10 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
