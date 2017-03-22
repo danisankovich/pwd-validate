@@ -1,0 +1,11 @@
+{
+  "name": "pwd-validate",
+  "version": "1.0.0",
+  "description": "Password validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Michael Sankovich",
+  "license": "ISC"
+}
