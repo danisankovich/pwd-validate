@@ -1,3 +1,5 @@
+'use strict';
+
 const getSpecifications = (options) => {
   const validOptions = [
     'minLength', 'maxLength', 'hasNumber', 'hasLowerCase', 'hasUpperCase', 'hasSpecialCharacter', 'hasNoInvalidStrings',
@@ -74,53 +76,54 @@ const pwdValidate = (password, options) => {
   if (typeof password !== 'string') {
     errors.passwordType = 'Password must be a string';
   }
-
-  if (typeof options !== 'object' || Array.isArray(options)) {
-    errors.optionsType = 'Optional arguments must be passed as an object';
-  }
-
-  const {
-    minLength,
-    maxLength,
-    hasNumber,
-    hasLowerCase,
-    hasUpperCase,
-    hasSpecialCharacter,
-    hasNoInvalidStrings,
-  } = getSpecifications(options);
-
-  if (minLength) {
-    if (checkMinLength(password, minLength)) errors.minLength = checkMinLength(password, minLength);
-  }
-  if (maxLength) {
-    if (checkMaxLength(password, maxLength)) errors.maxLength = checkMaxLength(password, maxLength);
-  }
-  if (minLength && maxLength) {
-    if (minLength >= maxLength) {
-      errors.equalLength = 'minLength cannot be equal to or greater than maxLength';
+  if (options) {
+    if (typeof options !== 'object' || Array.isArray(options)) {
+      errors.optionsType = 'Optional arguments must be passed as an object';
     }
-  }
 
-  if (hasNumber) {
-    if (!checkHasNumber(password)) errors.hasNumber = 'Password must contain at least one number';
-  }
+    const {
+      minLength,
+      maxLength,
+      hasNumber,
+      hasLowerCase,
+      hasUpperCase,
+      hasSpecialCharacter,
+      hasNoInvalidStrings,
+    } = getSpecifications(options);
 
-  if (hasLowerCase) {
-    if (!checkHasLowerCase(password)) errors.hasLowerCase = 'Password must contain at least one lower case letter';
-  }
-
-  if (hasUpperCase) {
-    if (!checkHasUpperCase(password)) errors.hasUpperCase = 'Password must contain at least one upper case letter';
-  }
-
-  if (hasSpecialCharacter) {
-    if (!checkHasSpecialCharacter(password)) errors.hasSpecialCharacter = 'Password must contain at least one special character';
-  }
-
-  if (hasNoInvalidStrings) {
-    if (checkHasNoInvalidStrings(password, hasNoInvalidStrings).length > 0) {
-      errors.hasNoInvalidStrings = `Password cannot contain the following strings: [${hasNoInvalidStrings.join(', ')}]`;
+    if (minLength) {
+      if (checkMinLength(password, minLength)) errors.minLength = checkMinLength(password, minLength);
     }
+    if (maxLength) {
+      if (checkMaxLength(password, maxLength)) errors.maxLength = checkMaxLength(password, maxLength);
+    }
+    if (minLength && maxLength) {
+      if (minLength >= maxLength) {
+        errors.equalLength = 'minLength cannot be equal to or greater than maxLength';
+      }
+    }
+
+    if (hasNumber) {
+      if (!checkHasNumber(password)) errors.hasNumber = 'Password must contain at least one number';
+    }
+
+    if (hasLowerCase) {
+      if (!checkHasLowerCase(password)) errors.hasLowerCase = 'Password must contain at least one lower case letter';
+    }
+
+    if (hasUpperCase) {
+      if (!checkHasUpperCase(password)) errors.hasUpperCase = 'Password must contain at least one upper case letter';
+    }
+
+    if (hasSpecialCharacter) {
+      if (!checkHasSpecialCharacter(password)) errors.hasSpecialCharacter = 'Password must contain at least one special character';
+    }
+
+    if (hasNoInvalidStrings) {
+      if (checkHasNoInvalidStrings(password, hasNoInvalidStrings).length > 0) {
+        errors.hasNoInvalidStrings = `Password cannot contain the following strings: [${hasNoInvalidStrings.join(', ')}]`;
+      }
+    }  
   }
 
   if (!isEmpty(errors)) {
