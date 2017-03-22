@@ -131,6 +131,6 @@ const secureit = (password, options) => {
 
 
 }
-console.log(secureit('tringtre', {minLength: 5, maxLength: 30, hasNumber: true, hasUpperCase: true, hasSpecialCharacter: true, hasNoInvalidStrings: ['true', 'myname'], asdf:'asdf'}))
+// console.log(secureit('tringtre', {minLength: 5, maxLength: 30, hasNumber: true, hasUpperCase: true, hasSpecialCharacter: true, hasNoInvalidStrings: ['true', 'myname'], asdf:'asdf'}))
 
 module.exports = secureit;
