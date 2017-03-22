@@ -110,16 +110,16 @@ const pwdValidate = (password, options) => {
   }
 
   if (hasUpperCase) {
-    if (!checkHasUpperCase(password)) errors.checkHasUpperCase = 'Password must contain at least one upper case letter';
+    if (!checkHasUpperCase(password)) errors.hasUpperCase = 'Password must contain at least one upper case letter';
   }
 
   if (hasSpecialCharacter) {
-    if (!checkHasSpecialCharacter(password)) errors.checkHasSpecialCharacter = 'Password must contain at least one special character';
+    if (!checkHasSpecialCharacter(password)) errors.hasSpecialCharacter = 'Password must contain at least one special character';
   }
 
   if (hasNoInvalidStrings) {
     if (checkHasNoInvalidStrings(password, hasNoInvalidStrings).length > 0) {
-      errors.checkHasNoInvalidStrings = `Password cannot contain the following strings: [${hasNoInvalidStrings.join(', ')}]`;
+      errors.hasNoInvalidStrings = `Password cannot contain the following strings: [${hasNoInvalidStrings.join(', ')}]`;
     }
   }
 
