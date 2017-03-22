@@ -68,7 +68,7 @@ const checkHasNoInvalidStrings = (password, badStrings) => {
   return badStringsFound;
 }
 
-const secureit = (password, options) => {
+const pwdValidate = (password, options) => {
   const errors = {};
 
   if (typeof password !== 'string') {
@@ -129,8 +129,6 @@ const secureit = (password, options) => {
     return { password, isValid: true };
   }
 
-
 }
-// console.log(secureit('tringtre', {minLength: 5, maxLength: 30, hasNumber: true, hasUpperCase: true, hasSpecialCharacter: true, hasNoInvalidStrings: ['true', 'myname'], asdf:'asdf'}))
 
-module.exports = secureit;
+module.exports = pwdValidate;
